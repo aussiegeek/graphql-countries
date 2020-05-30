@@ -5,7 +5,11 @@
   "author": "Alan Harper <alan@aussiegeek.net>",
   "license": "MIT",
   "private": false,
+  "engines": {
+    "node": "12.x"
+  },
   "dependencies": {
+    "@graphql-tools/graphql-file-loader": "^6.0.5",
     "@graphql-tools/load": "^6.0.3",
     "@graphql-tools/schema": "^6.0.3",
     "@types/express": "^4.17.6",
@@ -28,6 +32,7 @@
   },
   "scripts": {
     "start": "nodemon index.ts",
+    "build": "tsc",
     "graphql-code-gen": "graphql-codegen --config codegen.yml",
     "graphql-code-gen:watch": "graphql-codegen --config codegen.yml --watch",
     "test": "jest"
