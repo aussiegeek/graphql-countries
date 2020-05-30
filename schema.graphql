@@ -1,0 +1,19 @@
+"""
+Information about a single country
+"""
+type Country {
+  """
+  Commonly used English name for the country
+  """
+  name: String!
+}
+
+"""
+The query root for this schema
+"""
+type Query {
+  """
+  Fetch information about Countries
+  """
+  countries: [Country!]!
+}

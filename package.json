@@ -1,0 +1,35 @@
+{
+  "name": "graphql-countries",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Alan Harper <alan@aussiegeek.net>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@graphql-tools/load": "^6.0.3",
+    "@graphql-tools/schema": "^6.0.3",
+    "@types/express": "^4.17.6",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^15.0.0",
+    "graphql-tools": "^6.0.3"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "1.15.0",
+    "@graphql-codegen/typescript": "1.15.0",
+    "@graphql-codegen/typescript-resolvers": "^1.15.0",
+    "@types/jest": "^25.2.3",
+    "jest": "^26.0.1",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.0.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.3"
+  },
+  "scripts": {
+    "start": "nodemon index.ts",
+    "graphql-code-gen": "graphql-codegen --config codegen.yml",
+    "graphql-code-gen:watch": "graphql-codegen --config codegen.yml --watch",
+    "test": "jest"
+  }
+}

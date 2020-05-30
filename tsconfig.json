@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "ES6",
+    "module": "commonjs",
+    "lib": [],
+    "allowJs": false,
+    "outDir": "build",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
+  }
+}
