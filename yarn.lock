@@ -805,7 +805,7 @@
     fs-extra "9.0.0"
     tslib "~2.0.0"
 
-"@graphql-tools/graphql-file-loader@6.0.5":
+"@graphql-tools/graphql-file-loader@6.0.5", "@graphql-tools/graphql-file-loader@^6.0.5":
   version "6.0.5"
   resolved "https://registry.yarnpkg.com/@graphql-tools/graphql-file-loader/-/graphql-file-loader-6.0.5.tgz#c7b487528546e44f1a9a0d1fc996c81029e76dd8"
   integrity sha512-TSrD48/9bj1Ps4ne78PBurO/yP0wv7Qyjzg/Lfg04Apqw4cezVYIyqcTPGnXArQra1w/yORHw4726CKeZ96fbg==

@@ -2,6 +2,8 @@ import express from "express";
 import graphqlHTTP from "express-graphql";
 import schema from "./schema";
 
+const PORT = process.env.PORT || 3000;
+
 const app = express();
 app.use(
   "/",
@@ -11,6 +13,6 @@ app.use(
   })
 );
 
-app.listen(3000, () => {
-  console.info("Listening on http://localhost:3000/graphql");
+app.listen(PORT, () => {
+  console.info(`Listening on http://localhost:${PORT}/`);
 });
