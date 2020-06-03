@@ -6,8 +6,146 @@ type Country {
   Commonly used English name for the country
   """
   name: String!
+
+  """
+  Offically used English name for the country
+  """
+  officialName: String!
+
+  """
+  Other native & translated country names
+  """
+  names: [CountryName!]!
+
+  """
+  country code top-level domain
+  """
+  tld: [String!]!
+
+  """
+  code ISO 3166-1 alpha-2
+  """
+  cca2: String!
+
+  """
+  code ISO 3166-1 numeric
+  """
+  ccn3: String!
+
+  """
+  code ISO 3166-1 alpha-3
+  """
+  cca3: String!
+
+  """
+  code International Olympic Committee
+  """
+  cioc: String!
+
+  """
+  ISO 3166-1 independence status, true if indepdendent
+  """
+  independent: Boolean
+
+  """
+  ISO 3166-1 assignment status
+  """
+  status: ISO3166Status!
+
+  """
+  Currencies used in the country
+  """
+  currencies: [Currency!]!
+
+  """
+  Name of the capital city or cities
+  """
+  capitalCities: [String!]!
+
+  """
+  Alternative spellings
+  """
+  altSpellings: [String!]!
+
+  """
+  Region
+  """
+  region: Region!
+
+  """
+  Subregion
+  """
+  subregion: String!
+
+  """
+  Emoji representation of the country's flag
+  """
+  emoji: String!
 }
 
+enum ISO3166Status {
+  OFFICIALLY_ASSIGNED
+  USER_ASSIGNED
+}
+
+"""
+Translations of the name of a Country
+"""
+type CountryName {
+  """
+  three-letter ISO 639-3 language code
+  """
+  code: String!
+  """
+  Official name of country in this language
+  """
+  official: String!
+  """
+  Commonly used name of country in this language
+  """
+  common: String!
+  """
+  Is this name native or translated
+  """
+  type: CountryNameType!
+}
+
+"""
+Is this name native or translated
+"""
+enum CountryNameType {
+  NATIVE
+  TRANSLATED
+}
+
+"""
+Currency
+"""
+type Currency {
+  """
+  ISO 4127 Currency code
+  """
+  code: String!
+
+  """
+  Name of the currency
+  """
+  name: String!
+
+  """
+  Symbol of the currency
+  """
+  symbol: String!
+}
+
+enum Region {
+  AFRICA
+  AMERICAS
+  ANTARTIC
+  ASIA
+  EUROPE
+  OCEANIA
+}
 """
 The query root for this schema
 """
