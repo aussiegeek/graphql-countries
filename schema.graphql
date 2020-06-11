@@ -81,6 +81,11 @@ type Country {
   Emoji representation of the country's flag
   """
   emoji: String!
+
+  """
+  Bordering countries
+  """
+  borders: [Country!]!
 }
 
 enum ISO3166Status {

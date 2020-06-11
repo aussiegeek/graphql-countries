@@ -25,6 +25,7 @@ export interface CountryResolvers {
   region: Resolver<CountryModel, {}, Region>;
   subregion: Resolver<CountryModel, {}, string>;
   emoji: Resolver<CountryModel, {}, string>;
+  borders: Resolver<CountryModel, {}, CountryModel[]>;
 }
 
 export interface QueryResolvers {
