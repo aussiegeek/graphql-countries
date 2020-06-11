@@ -22,6 +22,7 @@ export type CountryModel = {
   region: Region;
   subregion: string;
   emoji: string;
+  borders: string[];
 };
 
 export interface Context {}

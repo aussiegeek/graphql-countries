@@ -1,4 +1,4 @@
-import { data } from "./countriesData";
+import { data, countriesByCCA3 } from "./countriesData";
 import { Resolvers } from "./src/generated/graphql";
 
 export const countriesResolver = () => data;
@@ -24,6 +24,7 @@ const resolvers: Resolvers & StringIndexSignatureInterface = {
     region: (model) => model.region,
     subregion: (model) => model.subregion,
     emoji: (model) => model.emoji,
+    borders: (model) => model.borders.map((cca3) => countriesByCCA3[cca3]),
     names: (model) => model.names,
     currencies: (model) => model.currencies,
   },

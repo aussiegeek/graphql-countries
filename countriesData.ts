@@ -27,6 +27,7 @@ export interface JSONCountry {
   altSpellings: string[];
   currencies: object;
   translations: object;
+  borders: string[];
 }
 
 const convertJSONToRegion = (region: string): Region | undefined => {
@@ -100,6 +101,7 @@ const jsonCountriesToModel = (jsonCountries: JSONCountry[]): CountryModel[] => {
         translations,
         status: jsonStatus,
         currencies: jsonCurrencies,
+        borders,
       }) => {
         const region = convertJSONToRegion(jsonRegion);
 
@@ -124,6 +126,7 @@ const jsonCountriesToModel = (jsonCountries: JSONCountry[]): CountryModel[] => {
           capitalCities,
           emoji,
           region,
+          borders,
         };
       }
     )
@@ -131,3 +134,10 @@ const jsonCountriesToModel = (jsonCountries: JSONCountry[]): CountryModel[] => {
 };
 
 export const data: CountryModel[] = jsonCountriesToModel(jsonCountries);
+export const countriesByCCA3 = data.reduce<Record<string, CountryModel>>(
+  (acc, country) => {
+    acc[country.cca3] = country;
+    return acc;
+  },
+  {}
+);
