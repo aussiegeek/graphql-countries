@@ -1,11 +1,13 @@
-import { graphql } from "graphql";
-import schema from "./schema";
+const { createTestClient } = require("apollo-server-testing");
+
+import server from "./server";
+const { query } = createTestClient(server);
 
 const gql = (str: TemplateStringsArray): string => str.join("");
 
 describe("end to end tests", () => {
   it("should fetch country names", async () => {
-    const query = gql`
+    const allCountries = gql`
       {
         countries {
           name
@@ -13,7 +15,7 @@ describe("end to end tests", () => {
       }
     `;
 
-    const result = await graphql(schema, query, null, {}, {});
+    const result = await query({ query: allCountries });
     const expected = { name: "Aruba" };
     return expect(result.data?.countries[0]).toEqual(expected);
   });
