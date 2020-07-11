@@ -9,7 +9,7 @@
     "node": "12.x"
   },
   "dependencies": {
-    "apollo-server": "^2.14.4",
+    "apollo-server": "^2.15.1",
     "graphql": "^15.0.0"
   },
   "devDependencies": {
