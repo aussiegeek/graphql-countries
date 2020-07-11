@@ -9,7 +9,7 @@
     "node": "12.x"
   },
   "dependencies": {
-    "apollo-server": "^2.15.1",
+    "apollo-server-lambda": "^2.15.1",
     "graphql": "^15.0.0"
   },
   "devDependencies": {
@@ -19,15 +19,14 @@
     "@types/jest": "^25.2.3",
     "apollo-server-testing": "^2.15.1",
     "jest": "^26.1.0",
-    "nodemon": "^2.0.4",
     "prettier": "^2.0.5",
     "ts-jest": "^26.1.1",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.3"
   },
   "scripts": {
-    "start": "nodemon index.ts",
-    "build": "tsc && cp schema.graphql build",
+    "start": "tsc --watch & netlify dev",
+    "build": "tsc && cp schema.graphql build/functions/graphql",
     "graphql-code-gen": "graphql-codegen --config codegen.yml",
     "graphql-code-gen:watch": "graphql-codegen --config codegen.yml --watch",
     "test": "jest",

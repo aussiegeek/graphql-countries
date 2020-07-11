@@ -1,5 +1,5 @@
 import fs from "fs";
-import { ApolloServer, gql } from "apollo-server";
+import { ApolloServer, gql } from "apollo-server-lambda";
 import resolvers from "./resolvers";
 const typeDefs = gql(
   fs.readFileSync(__dirname.concat("/schema.graphql"), "utf8")

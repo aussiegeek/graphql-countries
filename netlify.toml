@@ -1,0 +1,9 @@
+[build]
+functions = "build/functions/"
+publish = "build/"
+command = "yarn build"
+
+[[redirects]]
+from = "/"
+to = "/.netlify/functions/graphql"
+status = 200
