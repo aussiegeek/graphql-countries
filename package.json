@@ -9,8 +9,10 @@
     "node": "12.x"
   },
   "dependencies": {
+    "@types/aws-lambda": "^8.10.59",
     "apollo-server-lambda": "^2.15.1",
-    "graphql": "^15.0.0"
+    "graphql": "^15.0.0",
+    "libhoney": "^2.2.1"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "1.16.3",
