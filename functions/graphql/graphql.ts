@@ -36,7 +36,11 @@ const server = new ApolloServer({
   introspection: true,
 });
 
-const apolloHandler = server.createHandler();
+const apolloHandler = server.createHandler({
+  cors: {
+    origin: "*",
+  },
+});
 
 export const handler: Handler = (evt, context, callback) => {
   let startTime = Date.now();
