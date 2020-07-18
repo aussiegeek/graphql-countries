@@ -127,6 +127,7 @@ const jsonCountriesToModel = (jsonCountries: JSONCountry[]): CountryModel[] => {
           emoji,
           region,
           borders,
+          flagURL: `https://raw.githubusercontent.com/mledoze/countries/master/data/${cca3.toLowerCase()}.svg`,
         };
       }
     )

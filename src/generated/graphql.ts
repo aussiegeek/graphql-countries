@@ -17,7 +17,7 @@ export interface CountryResolvers {
   ccn3: Resolver<CountryModel, {}, string>;
   cca3: Resolver<CountryModel, {}, string>;
   cioc: Resolver<CountryModel, {}, string>;
-  independent: Resolver<CountryModel, {}, Boolean | null | undefined>;
+  independent: Resolver<CountryModel, {}, boolean | null | undefined>;
   status: Resolver<CountryModel, {}, ISO3166Status>;
   currencies: Resolver<CountryModel, {}, Currency[]>;
   capitalCities: Resolver<CountryModel, {}, string[]>;
@@ -26,6 +26,7 @@ export interface CountryResolvers {
   subregion: Resolver<CountryModel, {}, string>;
   emoji: Resolver<CountryModel, {}, string>;
   borders: Resolver<CountryModel, {}, CountryModel[]>;
+  flagURL: Resolver<CountryModel, {}, string>;
 }
 
 export interface QueryResolvers {
@@ -45,7 +46,7 @@ export interface CurrencyResolvers {
   symbol: Resolver<Currency, {}, string>;
 }
 
-type Resolver<R, A, T> = (
+export type Resolver<R, A, T> = (
   root: R,
   args: A,
   ctx: Context,

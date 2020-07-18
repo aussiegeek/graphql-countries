@@ -27,6 +27,7 @@ const resolvers: Resolvers & StringIndexSignatureInterface = {
     borders: (model) => model.borders.map((cca3) => countriesByCCA3[cca3]),
     names: (model) => model.names,
     currencies: (model) => model.currencies,
+    flagURL: (model) => model.flagURL,
   },
 };
 

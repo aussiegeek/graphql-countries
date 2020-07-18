@@ -23,6 +23,7 @@ export type CountryModel = {
   subregion: string;
   emoji: string;
   borders: string[];
+  flagURL: string;
 };
 
 export interface Context {}

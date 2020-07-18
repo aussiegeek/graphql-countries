@@ -158,6 +158,8 @@ describe("translate country from JSON to CountryModel", () => {
       region: Region.Americas,
       subregion: "Caribbean",
       emoji: "🇦🇼",
+      flagURL:
+        "https://raw.githubusercontent.com/mledoze/countries/master/data/abw.svg",
       borders: [],
     };
     expect(expected).toEqual(data[0]);
