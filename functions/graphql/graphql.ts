@@ -34,6 +34,9 @@ const server = new ApolloServer({
   resolvers,
   playground: true,
   introspection: true,
+  engine: {
+    reportSchema: true,
+  },
 });
 
 const apolloHandler = server.createHandler({
