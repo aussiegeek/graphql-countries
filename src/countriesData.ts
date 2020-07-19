@@ -1,11 +1,12 @@
-import jsonCountries from "./countries.json";
+import jsonCountries from "../countries.json";
 import {
   Region,
   ISO3166Status,
   Currency,
   CountryName,
-} from "./src/generated/graphql";
-import { CountryModel } from "./src/models";
+  Language,
+} from "./generated/graphql";
+import { CountryModel } from "./models";
 
 export interface JSONCountry {
   name: {
@@ -28,6 +29,7 @@ export interface JSONCountry {
   currencies: object;
   translations: object;
   borders: string[];
+  languages: object;
 }
 
 const convertJSONToRegion = (region: string): Region | undefined => {
@@ -68,6 +70,14 @@ const convertJSONToCurrencies = (
   });
 };
 
+const convertJSONToLanguages = (
+  currencies: JSONCountry["languages"]
+): Language[] => {
+  return Object.entries(currencies).map<Language>(([key, value]) => {
+    return { code: key, name: value };
+  });
+};
+
 const convertJSONToNames = (
   name: JSONCountry["name"],
   translations: JSONCountry["translations"]
@@ -102,6 +112,7 @@ const jsonCountriesToModel = (jsonCountries: JSONCountry[]): CountryModel[] => {
         status: jsonStatus,
         currencies: jsonCurrencies,
         borders,
+        languages: jsonLanguages,
       }) => {
         const region = convertJSONToRegion(jsonRegion);
 
@@ -128,6 +139,7 @@ const jsonCountriesToModel = (jsonCountries: JSONCountry[]): CountryModel[] => {
           region,
           borders,
           flagURL: `https://raw.githubusercontent.com/mledoze/countries/master/data/${cca3.toLowerCase()}.svg`,
+          languages: convertJSONToLanguages(jsonLanguages),
         };
       }
     )

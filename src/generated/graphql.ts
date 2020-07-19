@@ -5,6 +5,7 @@ export interface Resolvers {
   Country: CountryResolvers;
   Query: QueryResolvers;
   CountryName?: CountryNameResolvers;
+  Language?: LanguageResolvers;
   Currency?: CurrencyResolvers;
 }
 
@@ -27,6 +28,7 @@ export interface CountryResolvers {
   emoji: Resolver<CountryModel, {}, string>;
   borders: Resolver<CountryModel, {}, CountryModel[]>;
   flagURL: Resolver<CountryModel, {}, string>;
+  languages: Resolver<CountryModel, {}, Language[]>;
 }
 
 export interface QueryResolvers {
@@ -39,6 +41,11 @@ export interface CountryNameResolvers {
   official: Resolver<CountryName, {}, string>;
   common: Resolver<CountryName, {}, string>;
   type: Resolver<CountryName, {}, CountryNameType>;
+}
+
+export interface LanguageResolvers {
+  name: Resolver<Language, {}, string>;
+  code: Resolver<Language, {}, string>;
 }
 
 export interface CurrencyResolvers {
@@ -62,6 +69,11 @@ export interface CountryName {
   official: string;
   common: string;
   type: CountryNameType;
+}
+
+export interface Language {
+  name: string;
+  code: string;
 }
 
 export interface Currency {
