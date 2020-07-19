@@ -1,14 +1,16 @@
 import { data, countriesByCCA3 } from "./countriesData";
 import { Resolvers } from "./src/generated/graphql";
 
-export const countriesResolver = () => data;
+export const countries = () => data;
+export const country = (_parent: object, { cca3 }: { cca3: string }) =>
+  countriesByCCA3[cca3];
 
 interface StringIndexSignatureInterface {
   [index: string]: any;
 }
 
 const resolvers: Resolvers & StringIndexSignatureInterface = {
-  Query: { countries: countriesResolver },
+  Query: { countries, country },
   Country: {
     name: (model) => model.name,
     officialName: (model) => model.officialName,

@@ -31,6 +31,7 @@ export interface CountryResolvers {
 
 export interface QueryResolvers {
   countries: Resolver<{}, {}, CountryModel[]>;
+  country: Resolver<{}, QueryCountryArgs, CountryModel | null | undefined>;
 }
 
 export interface CountryNameResolvers {
@@ -53,6 +54,9 @@ export type Resolver<R, A, T> = (
   info: GraphQLResolveInfo
 ) => T | Promise<T>;
 
+export interface QueryCountryArgs {
+  cca3: string;
+}
 export interface CountryName {
   code: string;
   official: string;
