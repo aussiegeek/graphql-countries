@@ -1,5 +1,5 @@
 import { data, countriesByCCA3 } from "./countriesData";
-import { Resolvers } from "./src/generated/graphql";
+import { Resolvers } from "./generated/graphql";
 
 export const countries = () => data;
 export const country = (_parent: object, { cca3 }: { cca3: string }) =>
@@ -30,6 +30,7 @@ const resolvers: Resolvers & StringIndexSignatureInterface = {
     names: (model) => model.names,
     currencies: (model) => model.currencies,
     flagURL: (model) => model.flagURL,
+    languages: (model) => model.languages,
   },
 };
 

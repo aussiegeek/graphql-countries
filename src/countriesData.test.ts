@@ -1,10 +1,6 @@
 import { data } from "./countriesData";
-import { CountryModel } from "./src/models";
-import {
-  ISO3166Status,
-  Region,
-  CountryNameType,
-} from "./src/generated/graphql";
+import { CountryModel } from "./models";
+import { ISO3166Status, Region, CountryNameType } from "./generated/graphql";
 
 describe("translate country from JSON to CountryModel", () => {
   it("translates correctly", () => {
@@ -152,6 +148,10 @@ describe("translate country from JSON to CountryModel", () => {
           name: "Aruban florin",
           symbol: "ƒ",
         },
+      ],
+      languages: [
+        { code: "nld", name: "Dutch" },
+        { code: "pap", name: "Papiamento" },
       ],
       capitalCities: ["Oranjestad"],
       altSpellings: ["AW"],

@@ -17,6 +17,7 @@ export type CountryModel = {
   independent: boolean | null;
   status: ISO3166Status;
   currencies: { code: string; name: string; symbol: string }[];
+  languages: { code: string; name: string }[];
   capitalCities: Array<string>;
   altSpellings: Array<string>;
   region: Region;

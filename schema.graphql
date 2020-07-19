@@ -91,6 +91,11 @@ type Country {
   URL for the country's flag in SVG
   """
   flagURL: String!
+
+  """
+  Languages used in the country
+  """
+  languages: [Language!]!
 }
 
 enum ISO3166Status {
@@ -120,6 +125,20 @@ type CountryName {
   type: CountryNameType!
 }
 
+"""
+Details about a language
+"""
+type Language {
+  """
+  Name of the language in English
+  """
+  name: String!
+
+  """
+  three-letter ISO 639-3 language code
+  """
+  code: String!
+}
 """
 Is this name native or translated
 """
