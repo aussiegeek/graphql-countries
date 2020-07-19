@@ -164,4 +164,9 @@ type Query {
   Fetch information about Countries
   """
   countries: [Country!]!
+
+  """
+  Fetch information about a single country
+  """
+  country(cca3: String!): Country
 }
