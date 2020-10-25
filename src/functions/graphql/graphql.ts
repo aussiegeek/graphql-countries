@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { ApolloServer, gql } from "apollo-server-lambda";
 import { Handler } from "aws-lambda";
-import resolvers from "../../src/resolvers";
+import resolvers from "../../resolvers";
 
 const Libhoney = require("libhoney");
 let hny = new Libhoney({
