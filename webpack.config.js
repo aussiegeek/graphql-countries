@@ -2,12 +2,11 @@ const path = require("path");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 module.exports = {
-  mode: "production",
+  mode: "development",
   entry: "./src/functions/graphql/graphql.ts",
   resolve: {
     extensions: [".js", ".jsx", ".json", ".ts", ".tsx"],
   },
-  externals: ["bufferutil", "utf-8-validate"],
   output: {
     libraryTarget: "commonjs",
     path: path.join(__dirname, "build"),
