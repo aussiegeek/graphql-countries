@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { ApolloServer, gql } from "apollo-server-lambda";
-import { Handler } from "aws-lambda";
+import { APIGatewayProxyResult, Callback, Handler } from "aws-lambda";
 import resolvers from "../../src/resolvers";
 
 const Libhoney = require("libhoney");
@@ -36,25 +36,31 @@ const server = new ApolloServer({
   introspection: true,
 });
 
-const apolloHandler = server.createHandler({
-  cors: {
-    origin: "*",
-  },
-});
-
-export const handler: Handler = (evt, context, callback) => {
+export const handler: Handler = async function (event, context) {
   let startTime = Date.now();
   let ev = hny.newEvent();
   ev.add({ durationMs: Date.now() - startTime });
 
-  apolloHandler(evt, context, (error, result) => {
-    if (result) {
-      ev.add({ "response.statusCode": result.statusCode });
-    }
-    if (error) {
-      ev.add({ error });
-    }
-    ev.send();
-    callback(error, result);
+  return new Promise((resolve, reject) => {
+    const cb: Callback<APIGatewayProxyResult> = (error, result) => {
+      if (error) {
+        ev.add({ error });
+        ev.send();
+        reject(error);
+      }
+
+      if (result) {
+        ev.add({ "response.statusCode": result.statusCode });
+        ev.send();
+        resolve(result);
+      }
+
+      reject("No error or result");
+    };
+    server.createHandler({
+      cors: {
+        origin: "*",
+      },
+    })(event, context, cb);
   });
 };
