@@ -21,7 +21,7 @@
     "@types/jest": "^26.0.8",
     "apollo-server-testing": "^2.15.1",
     "jest": "^26.1.0",
-    "prettier": "^2.0.5",
+    "prettier": "^2.1.2",
     "ts-jest": "^26.1.4",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
