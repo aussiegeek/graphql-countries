@@ -19,7 +19,7 @@
     "@graphql-codegen/typescript": "1.17.11",
     "@homebound/graphql-typescript-simple-resolvers": "^1.28.0",
     "@types/jest": "^26.0.8",
-    "apollo-server-testing": "^2.15.1",
+    "apollo-server-testing": "^2.19.0",
     "jest": "^26.1.0",
     "prettier": "^2.0.5",
     "ts-jest": "^26.1.4",
