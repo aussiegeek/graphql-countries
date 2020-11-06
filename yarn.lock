@@ -1126,10 +1126,10 @@
     is-promise "4.0.0"
     tslib "~2.0.1"
 
-"@homebound/graphql-typescript-simple-resolvers@1.28.0":
-  version "1.28.0"
-  resolved "https://registry.yarnpkg.com/@homebound/graphql-typescript-simple-resolvers/-/graphql-typescript-simple-resolvers-1.28.0.tgz#ba01f9b439a72f336652e6b473b67534bcd330bd"
-  integrity sha512-9AghPsLffmAsVMn/NuSOwL6g2hG32Q9w7n4TzF34zFTF+rzwfFYJRPNSecUnN5QzKFdCxm987GZfwg9wvKL/Tw==
+"@homebound/graphql-typescript-simple-resolvers@1.33.0":
+  version "1.33.0"
+  resolved "https://registry.yarnpkg.com/@homebound/graphql-typescript-simple-resolvers/-/graphql-typescript-simple-resolvers-1.33.0.tgz#6d4cb7f40a8f8fe2c45c518f613ff6d64fcc37c4"
+  integrity sha512-1L9yfZN7JaPSu7D/EW0LlwPM6HywHS49hdsIg8x1X2I12y82+iuaYW+4hT2S5fCUtG75DeQUlZGjBMSFaxVP6g==
   dependencies:
     "@graphql-codegen/plugin-helpers" "^1.13.2"
     change-case "^4.1.1"
