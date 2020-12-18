@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@types/aws-lambda": "^8.10.64",
-    "apollo-server-lambda": "^2.15.1",
+    "apollo-server-lambda": "^2.19.0",
     "graphql": "^15.3.0",
     "libhoney": "^2.2.1"
   },
