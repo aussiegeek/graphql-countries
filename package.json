@@ -15,8 +15,8 @@
     "libhoney": "^2.2.1"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "1.21.1",
-    "@graphql-codegen/typescript": "1.21.0",
+    "@graphql-codegen/cli": "1.21.2",
+    "@graphql-codegen/typescript": "1.21.1",
     "@homebound/graphql-typescript-simple-resolvers": "1.38.0",
     "@types/jest": "26.0.20",
     "apollo-server-testing": "2.21.1",
