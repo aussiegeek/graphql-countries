@@ -22,7 +22,7 @@
     "apollo-server-testing": "2.21.1",
     "jest": "26.6.3",
     "prettier": "2.2.1",
-    "ts-jest": "26.5.3",
+    "ts-jest": "26.5.4",
     "ts-node": "8.10.2",
     "typescript": "4.2.3"
   },
