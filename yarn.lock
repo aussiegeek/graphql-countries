@@ -5562,10 +5562,10 @@ levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-libhoney@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/libhoney/-/libhoney-2.2.1.tgz#423413843fc3795003ed1880be17531f2bbe3f87"
-  integrity sha512-QR0W8tvqNWdapey+dtjaeI/0qJkXh3o3He1HZ1j1KsSMFJ/zGKB0kILi1gkZ/c5w8FAwMPYBuvLSz8TJvW11bw==
+libhoney@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/libhoney/-/libhoney-2.3.0.tgz#5cd3a23eaa4f3351a4852890086c6e7a6c621127"
+  integrity sha512-eG/zq0PLgNMwinw5RSQ8rQcvldXkMdf1r1uj3LtuMgWStNVdhtzleOUhG1eZE+sbRsjLOB0kQb8lkhuqQZj9EA==
   dependencies:
     superagent "^3.8.3"
     superagent-proxy "^2.0.0"
