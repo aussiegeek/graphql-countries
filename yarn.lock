@@ -1672,10 +1672,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/aws-lambda@^8.10.31", "@types/aws-lambda@^8.10.64":
-  version "8.10.64"
-  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.64.tgz#4bdcb725aef96bef0cb1decf19c7efff1df22fe7"
-  integrity sha512-LRKk2UQCSi7BsO5TlfSI8cTNpOGz+MH6+RXEWtuZmxJficQgxwEYJDiKVirzgyiHce0L0F4CqCVvKTwblAeOUw==
+"@types/aws-lambda@^8.10.106", "@types/aws-lambda@^8.10.31":
+  version "8.10.106"
+  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.106.tgz#8f64c61c978e46a592044b5a697cb80ea9a542d3"
+  integrity sha512-yzgMaql7aW1by1XuhKhovuhLyK/1A60lapFXDXXBeHmoyRGQFO2T8lkL3g8hAhHoW5PEvqPJFWPd8jvXiRnxeQ==
 
 "@types/babel__core@^7.0.0":
   version "7.1.9"
